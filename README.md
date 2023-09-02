@@ -30,11 +30,11 @@
 | CRI v1alpha2 | A partir da versão 1.26 do Kubernetes, foi removido o suporte ao CRI v1alpha2 e ao Containerd 1.5. O repositório oficial do Ubuntu não tem o Containerd 1.6, então precisará usar o repositório do Docker pra instalar o ContainerD. |
 
 ### A seguir os requisitos mínimos nossos testes:
-- Máquina Linux (aqui no caso vou utilizar Ubuntu 20.04)
+- Máquina Linux (aqui no caso vou utilizar Ubuntu 22.04)
 - 2 GB de memória RAM
 - 2 CPUs
 - Conexão de rede entre as máquinas
 - Hostname, endereço MAC e product_uuid únicos pra cada nó.
 - Swap desabilitado
 
-> Navegue entre os READMEs deste repositório para mais guias. 😊
+> Este repositório está sendo constantemente atualizado, por favor desconsidere a desorganização. Navegue entre os READMEs deste repositório para mais guias. 😊
