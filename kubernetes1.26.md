@@ -1,5 +1,7 @@
 # Como criar o seu cluster Kubernetes 1.26 com Kubeadm
 
+Manual de como instalar e configurar laboratório de minikube
+
 link: https://www.youtube.com/watch?v=aXt5jaUBXBE&t=320s
 
 a aula só começa de fato em 38:50 do video
