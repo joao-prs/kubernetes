@@ -1,4 +1,4 @@
-# Como criar o seu cluster Kubernetes 1.26 com Kubeadm
+# Guia de instalação
 
 <div  align="center" style="align-items: flex-start;"><img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="icon" width="65" height="65" /></div>
 
