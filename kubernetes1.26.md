@@ -1,5 +1,7 @@
 # Como criar o seu cluster Kubernetes 1.26 com Kubeadm
 
+<div  align="center" style="align-items: flex-start;"><img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="icon" width="65" height="65" /></div>
+
 ### Sumário
 - <a href="https://github.com/joao-prs/kubernetes">Voltar para o início.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes1.26-extras.md">Conteúdo extra.</a>
