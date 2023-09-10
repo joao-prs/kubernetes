@@ -1,7 +1,10 @@
 # Extras
 
-### comandos extras
+### Sumário
+- <a href="https://github.com/joao-prs/kubernetes">Voltar para o início.</a>
+- <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes1.26.md">Guia de instalação.</a>
 
+### comandos extras
 
 ```bash
 # execute no control-plane
@@ -11,7 +14,6 @@ kubectl get nodes
 
 kubectl get all -n kube-system
 ```
-
 
 ```bash
 kubectl get namespaces
@@ -54,3 +56,5 @@ expor para ser acessivel fora do cluster
 ```bash
 kubectl expose pod nginx --type NodePort
 ```
+
+> Organização neste documento em breve
