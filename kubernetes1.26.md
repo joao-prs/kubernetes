@@ -1,5 +1,7 @@
 # Como criar o seu cluster Kubernetes 1.26 com Kubeadm
 
+
+<!--
 Manual de como instalar e configurar laboratório de minikube
 
 link: https://www.youtube.com/watch?v=aXt5jaUBXBE&t=320s
@@ -7,11 +9,12 @@ link: https://www.youtube.com/watch?v=aXt5jaUBXBE&t=320s
 a aula só começa de fato em 38:50 do video
 
 material: https://highfalutin-vulture-304.notion.site/Instala-o-com-Kubeadm-8ce4f709872342ff848a4df77e53618d
+-->
 
 
-#### Primeiros passos
-executar isso em todos os nodes do cluster
+### Primeiros passos
 
+executar todos comandos a seguir em todos os nodes do cluster
 ```bash
 sudo swapoff -a
 
@@ -28,11 +31,18 @@ net.bridge.bridge-nf-call-iptables  = 1
 net.ipv4.ip_forward                 = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 EOF
+
+# aplica alteração sem precisar reiniciar
+sudo sysctl --system
 ```
 
+Instale algumas ferramentas
 ```bash
-sudo apt update && sudo apt install     ca-certificates     curl     gnupg     lsb-release -y
+sudo apt update && sudo apt install ca-certificates curl gnupg lsb-release -y
+```
 
+configure o repositório
+```bash
 sudo mkdir -p /etc/apt/keyrings
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
@@ -43,9 +53,13 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | 	sudo gpg --dearmor -o
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-sudo apt-get update
+# finalize com...
+sudo apt update
+```
 
-sudo apt update && sudo apt install -y containerd.io -y
+Instale e configure o CRI
+```bash
+sudo apt install -y containerd.io -y
 
 sudo mkdir -p /etc/containerd && containerd config default | sudo tee /etc/containerd/config.toml
 
@@ -58,8 +72,7 @@ sudo systemctl restart containerd
 sudo systemctl status containerd
 ```
 
-
-#### Instalação do kubeadm, kubelet and kubectl
+Instalação do kubeadm, kubelet and kubectl
 ```bash
 sudo apt-get update && \
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -75,13 +88,11 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-
-#### Iniciando o cluster Kubernetes
-execute apenas no control plane
+### Iniciando o cluster Kubernetes
+execute os comandos a seguir apenas no control plane
 ```bash
 kubeadm init
-
-# pode ocorrer erros, saiba o que esta fazendo
+# pode ocorrer erros, siga as orientações
 ```
 
 o k8s irá retornar alguns comandos que voce deve executar, devem ser semelhantes a esses:
@@ -105,13 +116,16 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 #kubeadm join 172.18.36.100:6443 --token jqqhf2.vnduf7rghio6mdh2 \
 #	--discovery-token-ca-cert-hash sha256:959461ae24a0f6810bbf6a1359d6a631438b1f34a5c0ca151089bd7578dfc695
 ```
-
+> comentei as linhas menos importantes do output, mas as deixei para que você possa comparar
 
 
 ### Container Network Interface CNI
+Instale uma interface de rede para o kubernetes
 ```bash
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 
 # espere um tempo e ...
 kubectl get nodes
 ```
+
+> Pronto, você finalizou a instalação do kubernetes, agora você pode utilizado para testes e labs. Para um ambiente mais avançado, pesquise recursos mais otimizados e tenha disponivel um bom computador ou servidor com recursos abundantes para laboratórios mais complexos e que tenha suporte a cargas maiores de trabalho. 
