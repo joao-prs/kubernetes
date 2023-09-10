@@ -5,16 +5,6 @@
 ### Sumário
 - <a href="https://github.com/joao-prs/kubernetes">Voltar para o início.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes1.26-extras.md">Conteúdo extra.</a>
-<!--
-Manual de como instalar e configurar laboratório de minikube
-
-link: https://www.youtube.com/watch?v=aXt5jaUBXBE&t=320s
-
-a aula só começa de fato em 38:50 do video
-
-material: https://highfalutin-vulture-304.notion.site/Instala-o-com-Kubeadm-8ce4f709872342ff848a4df77e53618d
--->
-
 
 ### Primeiros passos
 
