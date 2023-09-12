@@ -61,4 +61,4 @@ expor para ser acessivel fora do cluster
 kubectl expose pod nginx --type NodePort
 ```
 
-> Organização neste documento em breve
+> Organização chegará neste documento em breve
