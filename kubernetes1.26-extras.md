@@ -8,6 +8,8 @@
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes.concepts.md">Conceitos básicos.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes.manifest.md">Arquivo Manifesto.</a>
 
+> Organização chegará neste documento em breve
+
 ### comandos extras
 
 ```bash
@@ -60,5 +62,3 @@ expor para ser acessivel fora do cluster
 ```bash
 kubectl expose pod nginx --type NodePort
 ```
-
-> Organização chegará neste documento em breve
