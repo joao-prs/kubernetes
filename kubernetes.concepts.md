@@ -49,3 +49,44 @@ kind: Namespace
 metadata:
   name: meu-namespace
 ```
+
+### ConfigMap
+No Kubernetes, um ConfigMap é um recurso que permite armazenar configurações ou dados de configuração em formato de chave-valor que pode ser usado por aplicativos em contêineres dentro de pods. O objetivo principal de um ConfigMap é separar a configuração do código do aplicativo, facilitando a modificação das configurações sem a necessidade de redesenhar ou recompilar o aplicativo.
+Pode ser usado em aplicações como *Configuração de aplicativo*, *Chaves de API ou tokens*, *Configuração de proxy reverso (Ingress)*, *Configuração do Nginx ou outros servidores web*
+
+#### YAML
+```yml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: meu-configmap
+data:
+  CHAVE1: valor1
+  CHAVE2: valor2
+```
+você pode referenciá-lo em um pod ou em outros recursos do Kubernetes, como Deployment, usando variáveis de ambiente ou montando-o como um volume no pod.
+
+#### YAML
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meu-pod
+spec:
+  containers:
+  - name: meu-container
+    image: minha-imagem
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: meu-configmap
+```
+Isso permitirá que os dados do ConfigMap sejam acessíveis no caminho /etc/config no pod.
+
+### Secret
+### StatefulSet
+### PersistentVolume
+### Ingress
