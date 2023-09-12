@@ -55,6 +55,7 @@ metadata:
 
 ### ConfigMap
 No Kubernetes, um ConfigMap é um recurso que permite armazenar configurações ou dados de configuração em formato de chave-valor que pode ser usado por aplicativos em contêineres dentro de pods. O objetivo principal de um ConfigMap é separar a configuração do código do aplicativo, facilitando a modificação das configurações sem a necessidade de redesenhar ou recompilar o aplicativo.
+
 Pode ser usado em aplicações como *Configuração de aplicativo*, *Chaves de API ou tokens*, *Configuração de proxy reverso (Ingress)*, *Configuração do Nginx ou outros servidores web*
 
 #### YAML
@@ -150,5 +151,52 @@ spec:
 
 
 ### StatefulSet
+é usado para gerenciar aplicativos com estados, como bancos de dados e outros sistemas que mantêm dados persistentes. Ao contrário de outros controladores, como Deployments, que são usados para aplicativos sem estado, o StatefulSet fornece garantias específicas em relação à ordem de inicialização, identidade persistente e nomes de serviço para pods em seu conjunto. 
+
+As principais características são *Identidade persistente*, *Ordem de inicialização controlada*, *Persistência de volumes* e *Nomes de serviço previsíveis*.
+
+#### YAML
+```yml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: meu-statefulset
+spec:
+  replicas: 3 ## numero de réplicas
+  serviceName: meu-statefulset-svc ## nome do teu serviço
+  selector:
+    matchLabels:
+      app: meu-app
+  template:
+    metadata:
+      labels:
+        app: meu-app
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem
+        ports:
+        - containerPort: 80
+  ## cada pod terá um volume persistente chamado "meu-volume" com capacidade de 1Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: meu-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: meu-sc
+      resources:
+        requests:
+          storage: 1Gi
+```
+Ele é frequentemente usado para implementar sistemas de banco de dados, servidores de mensagens e outros aplicativos que requerem essas garantias.
+
 ### PersistentVolume
+é um recurso que representa uma unidade de armazenamento física no cluster. Ele é usado para abstrair detalhes específicos de armazenamento e fornecer um mecanismo de alocação dinâmica ou estática de armazenamento para pods. Os PersistentVolumes são uma parte importante da gestão de armazenamento persistente em aplicativos Kubernetes.
+
+- **PersistentVolume (PV)**: É a representação abstrata de um volume de armazenamento físico. Um PV pode ser configurado manualmente por um administrador de cluster ou provisionado dinamicamente por um controlador de provisionamento de armazenamento, dependendo da infraestrutura subjacente do cluster.
+
+- **PersistentVolumeClaim (PVC)**: É uma solicitação feita por um usuário ou um aplicativo para reservar uma quantidade específica de armazenamento. Os PVCs são usados pelos pods para solicitar acesso a um PV com determinadas características (como capacidade, modo de acesso e modo de retenção).
+
+- **Classe de armazenamento (StorageClass)**: É um recurso que define as propriedades e os parâmetros para a alocação dinâmica de PVs. As classes de armazenamento permitem que os administradores definam políticas de provisionamento e forneçam opções de armazenamento personalizadas para diferentes aplicativos.
+
 ### Ingress
