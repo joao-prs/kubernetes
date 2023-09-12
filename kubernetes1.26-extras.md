@@ -5,6 +5,7 @@
 ### Sumário
 - <a href="https://github.com/joao-prs/kubernetes">Voltar para o início.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes1.26.md">Guia de instalação.</a>
+- <a href="https://github.com/joao-prs/kubernetes/blob/main/kubernetes1.manifest.md">Arquivo Manifesto.</a>
 
 ### comandos extras
 
