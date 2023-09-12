@@ -200,3 +200,12 @@ Ele é frequentemente usado para implementar sistemas de banco de dados, servido
 - **Classe de armazenamento (StorageClass)**: É um recurso que define as propriedades e os parâmetros para a alocação dinâmica de PVs. As classes de armazenamento permitem que os administradores definam políticas de provisionamento e forneçam opções de armazenamento personalizadas para diferentes aplicativos.
 
 ### Ingress
+é um recurso que gerencia o acesso externo a serviços dentro de um cluster Kubernetes. Ele atua como uma camada de abstração entre os serviços internos do cluster e o tráfego externo, permitindo o roteamento de solicitações HTTP e HTTPS para serviços específicos com base em regras de configuração.
+
+- **Ingress Controller**: controlador de Ingress em execução no cluster. O controlador de Ingress é responsável por implementar as regras de configuração definidas nos recursos de Ingress em serviços ou outros recursos de Kubernetes.
+
+- **Regras de Ingress**: regras especificam como o tráfego externo deve ser roteado para serviços internos. correspondência de caminhos URL, cabeçalhos HTTP, redirecionamento para URLs diferentes e muito mais.
+
+- **TLS/SSL Termination**: suportam a terminação SSL/TLS, permitindo que você forneça suporte HTTPS para seus serviços sem que os pods subjacentes precisem lidar com a criptografia SSL/TLS.
+
+
