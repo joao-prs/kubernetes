@@ -42,7 +42,6 @@ kubectl expose pod nginx --port="80"
 kubectl delete pods nginx
 ```
 
-
 atalhos
 ```bash
 kubectl get pods
