@@ -11,7 +11,7 @@ sudo apt -y upgrade
 
 # step 2 | Install Docker
 sudo apt -y install docker.io
-docker ––version
+docker --version
 
 # step 3 | Start and Enable Docker
 sudo systemctl enable docker
@@ -29,7 +29,7 @@ sudo apt-get install kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 
 # step 7 | Kubernetes Deployment # Start by disabling the swap memory on each server
-sudo swapoff –a
+sudo swapoff -a
 
 # step 8 | Assign Unique Hostname for Each Server Node
 sudo hostnamectl set-hostname M1 # master node
