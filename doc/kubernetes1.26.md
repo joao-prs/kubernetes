@@ -54,7 +54,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt update
 ```
 
-Instale e configure o CRI
+### Container Runtime Interface CRI
+containerd também é utilizado pelo docker, evitando o método antigo de instalar o docker para poder instalar o kubernetes
 ```bash
 sudo apt install -y containerd.io -y
 
