@@ -43,7 +43,8 @@
 ### Sumário
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes1.26.md">Guia de instalação.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.concepts.md">Conceitos básicos.</a>
-- <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Arquivo Manifesto.</a>
+- <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Sobre o arquivo de manifesto.</a>
+- <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Exemplos de manifesto.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes1.26-extras.md">Conteúdo extra.</a>
 
 > Este repositório está sendo constantemente atualizado, por favor desconsidere a desorganização. Navegue entre os READMEs deste repositório para mais guias. 😊
