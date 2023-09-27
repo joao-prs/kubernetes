@@ -55,7 +55,7 @@ sudo apt update
 ```
 
 ### Container Runtime Interface CRI
-containerd também é utilizado pelo docker, evitando o método antigo de instalar o docker para poder instalar o kubernetes
+containerd também é utilizado pelo docker, evitando o método antigo de instalar o docker para poder instalar o kubernetes.
 ```bash
 sudo apt install -y containerd.io -y
 

@@ -7,8 +7,12 @@
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Sobre o arquivo de manifesto.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes1.26-extras.md">Conteúdo extra.</a>
 
-### Este Doc
-Nesta página, estarei ensinando alguns conceitos gerais e alguns vagos exemplos.
+
+### Interfaces do kubernetes
+Para que o k8s não precise de um grande binário, você pode customizá-lo com partes de ferramentas que faz o cluster ser possível, essas partes são chamadas de interface.
+- CRI (Container Runtime Interface) exemplos: containerd...
+- CNI (Container Network Interface) exemplos: wavenet, calico, flannel...
+- CSI (Container Storage Interface) exemplos: public cloud, longhorn, glusterFS...
 
 ### Pod
 representa a unidade mais simples e básica de implantação no Kubernetes. Ele é usado para definir um único contêiner ou um grupo de contêineres que compartilham o mesmo ambiente de execução.
