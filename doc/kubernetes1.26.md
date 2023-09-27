@@ -5,7 +5,7 @@
 ### Sumário
 - <a href="https://github.com/joao-prs/kubernetes">Voltar para o início.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.concepts.md">Conceitos básicos.</a>
-- <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Arquivo anifesto.</a>
+- <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.some.manifest.md">Exemplo de manifesto.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes.manifest.md">Sobre o arquivo de manifesto.</a>
 - <a href="https://github.com/joao-prs/kubernetes/blob/main/doc/kubernetes1.26-extras.md">Conteúdo extra.</a>
 
