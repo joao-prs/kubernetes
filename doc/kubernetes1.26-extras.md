@@ -35,7 +35,7 @@ kubectl describe pods -n <namespace> <pod>
 kubectl describe pods -n portainer portainer-agent-5d979d5f6b-6zvkd
 ```
 
-lab rapido
+laboratório rapido
 ```bash
 kubectl run nginx --image nginx
 kubectl get pods
@@ -43,22 +43,24 @@ kubectl expose pod nginx --port="80"
 kubectl delete pods nginx
 ```
 
-atalhos
+alguns atalhos
 ```bash
-kubectl get pods
-kubectl get po
+kubectl get pods # extenso
+kubectl get po   # atalho
 
-kubectl get service
-kubectl get svc
+kubectl get service # extenso
+kubectl get svc     # atalho
 
-kubectl get deployment
-kubectl get deploy
+kubectl get deployment # extenso
+kubectl get deploy     # atalho
 
-kubectl get namespace
-kubectl get ns
+kubectl get namespace # extenso
+kubectl get ns        # atalho
 ```
 
 expor para ser acessivel fora do cluster
 ```bash
 kubectl expose pod nginx --type NodePort
+
 ```
+rode ```kubectl get services``` para visualizar a porta exposta.

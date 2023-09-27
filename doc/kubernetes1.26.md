@@ -128,4 +128,6 @@ kubectl get nodes
 
 > Pronto, você finalizou a instalação do kubernetes, agora você pode utilizado para testes e labs. Para um ambiente mais avançado, pesquise recursos mais otimizados e tenha disponivel um bom computador ou servidor com recursos abundantes para laboratórios mais complexos e que tenha suporte a cargas maiores de trabalho. 
 
+> JAMAIS USE ESSE CENÁRIO EM PRODUÇÃO! Recomenda-se pelo menos 3 Control-plane e o mínimo de 3 Worker Nodes em HA para cenários corporativos. 
+
 [Voltar para o topo](#guia-de-instalação)
